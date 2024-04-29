@@ -1,0 +1,457 @@
+* {
+    margin: 0px;
+    border: 0px;
+
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.full-page-section {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    background-color: white;
+}
+
+
+.dropdown-content {
+    background: url("../images/textures/wood-texture-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 20px;
+    padding: 10px;
+
+    display: none;
+
+    line-height: normal;
+    font-size: 32px;
+
+    z-index: 10000;
+}
+
+
+.navbar {
+    width: 100%;
+    min-height: 100px;
+
+    padding: 24px 80px 0px 80px;
+
+
+    position: absolute;
+    display: block;
+
+    top: 0px;
+    left: 0px;
+}
+
+.navbar > div {
+
+    width: 100%;
+    height: 123px;
+
+    display: block
+}
+
+.navbar-items {
+    width: 100%;
+
+}
+
+.navbar-items div {
+    min-width: 30px;
+    min-height: 30px;
+
+    display: block;
+
+    float:left;
+
+    margin-right: 61px;
+
+    line-height: 123px;
+
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+.navbar-items .fa-chevron-down {
+    margin-left: 12px;
+}
+
+.navbar-user {
+    float: right;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    background-color: black;
+    display: block;
+
+    transform: translateY(22px);
+    
+    color: #C2C2C2;
+    text-align: center;
+    line-height: 80px;
+
+    font-size: 51px;
+
+    cursor: pointer;
+}
+
+.navbar-user i {
+    transform: translateY(14px);
+}
+
+.section-body {
+    width: 87.3%;
+    height: 100%;
+    margin: auto;
+
+    padding: 100px 0 100px 0;
+}
+
+.fifty-fifty {
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifty-fifty > div {
+    width: 43.611111111111%;
+
+    display: block;
+}
+
+.row {
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 50px;
+    
+    margin-top: 10px;
+
+}
+
+.row-header {
+    float: left;
+
+    width: 45%;
+    
+    font-size: 40px;
+}
+
+.row-content {
+    font-size: 25px;
+
+    transform: translateY(13px);
+}
+
+.hero-highlight-card {
+    width: 54.2509%;
+    height: 59.218%;
+    
+    max-width: 782px;
+    max-height: 504px;
+
+    right: 103px;
+    top: 275px;
+    position: absolute;
+
+    display: block;
+
+    border-radius: 30px;
+
+    background-color: rgba(255,255,255,0.8);
+
+    padding: 20px 45px 20px 45px;
+}
+
+.hero-highlight-card h1 {
+    font-size: 45px;
+    font-weight: normal;
+}
+
+.hero-highlight-card p {
+    font-size: 21px;
+}
+
+.hero-highlight-card .fifty-fifty > div {
+    width: 48%;
+}
+
+.hero-highlight-card .fifty-fifty {
+    margin-top: 20px;
+
+    height: 80%;
+}
+
+
+
+
+
+.calander-card {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.05);
+
+    padding: 15px;
+
+    position: relative;
+}
+
+.calander-time-slot {
+    display: block;
+    width: 100%;
+    float: left;
+
+    margin-top: 20px;
+}
+
+.calander-card select {
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 20px;
+
+    padding: 5px 7px 5px 12px;
+}
+
+.calander-header {
+    text-align: right;    
+    width: 100%;
+}
+
+.calander-colon {
+    font-weight: 999;
+    font-size: 32px;
+
+    font-style: normal;
+}
+
+.calander-slot-availability {
+    margin-left: 20px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.calander-slot-availability .fa-check {
+    color: green;
+}
+
+.calander-booking-button {
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 20px;
+
+    padding: 5px 12px 5px 12px;
+}
+
+
+.calander-dates > div > div {
+    float: left;
+
+    text-align: center;
+
+    margin: 7px 0px 7px 0px;
+
+    width: 14.28%;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    border: 2px solid transparent;
+
+}
+
+.calander-start, .calander-end, .calander-during, .calander-whole {
+    color: #0094FF;
+    border-color: #0094FF !important;
+}
+
+.calander-start {
+    border-right: 0px !important;
+
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.calander-end {
+    border-left: 0px !important;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.calander-during {
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
+
+.calander-whole {
+    border-radius: 5px;
+}
+
+
+
+.transition {
+    width: 100%;
+
+    z-index: 100;
+}
+
+.transition img {
+    width: 100%;
+}
+
+.animal-list-section {
+    background: url("../images/textures/wood-texture-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.animal-card-highlight {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 20px;
+
+    display: block;
+
+    padding: 22px;
+}
+
+.animal-cards {
+    height: 22.323%;
+    margin-bottom: 3.762%;
+}
+
+.animal-cards > div {
+    height: 100%;
+    width: 47.606%;
+    border-radius: 20px;
+
+    padding: 8px;
+
+    display: flex;
+}
+
+.animal-cards > div, .animal-card-highlight {
+    background: url("../images/textures/wood-texture-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.animal-cards > div img {
+    height: 100%;
+    width: 52%;
+
+    border-radius: 20px;
+}
+
+.animal-cards > div > div {
+    margin-left: 3.06%;
+}
+
+
+
+.animal-cards h1 {
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.animal-cards h2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.animal-card-highlight img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+
+.animal-card-highlight td {
+    border-bottom: black 2px solid;
+}
+
+
+
+
+
+
+
+.contact-section h1 {
+    font-size: 60;
+}
+
+.contact-section {
+    margin-top: 30px;
+}
+
+.contact-us-location {
+    width: 100%;
+}
+
+
+.card-centered {
+    margin: auto;
+
+    position: initial !important;
+    right: initial !important;
+    top: initial !important;
+
+}
+
+
+.expired-date {
+    color: rgba(0,0,0,0.4)
+}
+
+.calander-footer {
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.calander-footer button, .calander-footer input {
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 20px;
+
+    padding: 5px 12px 5px 12px;
+}
+
+.calander-footer input {
+    width: 150px;
+}
+
+.transition-background {
+    width: 100%;
+    height: 100%;
+    top: 100%;
+
+    z-index: -1;
+
+    position: absolute;
+}

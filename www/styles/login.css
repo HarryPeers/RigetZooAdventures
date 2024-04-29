@@ -1,0 +1,125 @@
+.login-header {
+    background: url("../images/backgrounds/login.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.register-header {
+    background: url("../images/backgrounds/register.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.login-card {
+    height: 100%;
+
+    transform: translateY(150px);
+}
+
+.login-card h1 {
+    text-align: center;
+}
+
+.login-card-inner {
+    margin: auto;
+
+    height: 76.333%;
+    width: 48.2%;
+
+    display: block;
+
+    background-color: rgba(0,0,0,0.05);
+
+    border-radius: 30px;
+
+    margin-top: 35px;
+
+    padding: 23px;
+
+    position: relative;
+}
+
+.forgotten-password {
+    cursor: pointer;
+}
+
+.login-card-inner input {
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 20px;
+
+    padding: 5px 12px 5px 12px;
+    
+    width: 100%;
+
+    margin-bottom: 12px;
+}
+
+
+.login-card-inner button {
+
+    float: right;
+
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 20px;
+
+    padding: 5px 12px 5px 12px;
+}
+
+
+.register-account-button {
+    text-align: center;
+
+    width: 90%;
+
+    positioN:absolute;
+    bottom: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.account-login-error {
+    transform: translateY(20px);
+
+    margin: auto;
+
+    width: fit-content;
+
+    font-size: 16px;
+
+    color: red;
+}
+
+.login-account-button {
+    text-align: left;
+
+
+    float: left;
+
+    transform: translateY(3px);
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.secure-account-content {
+    margin-bottom: 30px;
+}
+
+.secure-account-content h1 {
+    font-size: 16px;
+
+    text-align: left;
+}
+
+.secure-account-content p {
+    font-size: 10px;
+}
+
+
+

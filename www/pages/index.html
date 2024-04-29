@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title>Ridget Zoo Adventures</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/styles/comic-neue.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/index.css">
+    </head>
+    <body>
+        <div class="index-header full-page-section">
+            <div class="component">navbar.js</div>
+            <div class="section-body">
+                <div class="high-contrast-background hero-highlight-card comic-neue-regular">
+                    <h1>Book your next big Adventure</h1>
+                    <div class="fifty-fifty">
+                        <div class="high-contrast-background calander-card" id="zoo-calander">
+                            <div class="calander-header">
+                                <select>
+                                </select>
+                                <select>
+                                </select>
+                            </div>
+                            <div class="calander-dates">
+                            </div>
+                            <div class="calander-time-slot">
+                                <select>
+                                    <option selected>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                    <option>18</option>
+                                </select>
+                                <span class="calander-colon">:</span>
+                                <select>
+                                    <option selected>00</option>
+                                    <option>15</option>
+                                    <option>30</option>
+                                    <option>45</option>
+                                </select>
+                        
+                                <span class="calander-slot-availability">
+                                    Slot available <i class="fa-solid fa-check"></i>
+                                </span>
+                            </div>
+                            
+                            <div class="calander-footer">
+                                <input placeholder="Vehicle Registration" id="vehicle-registration">
+                                <button class="calander-booking-button">Confirm booking</button>
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                Book your next big adventure today! All bookings are a reservation and payment is expected on arrival at the front gate. Please pay per vehicle entering the safari zoo, aswell as entering the registration of the vehicle to avoid any problems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="transition">
+            <img src="./images/transitions/index-1.PNG">
+        </div>
+
+        <div class="animal-list-section full-page-section comic-neue-regular">
+            <div class="section-body">
+                <div class="fifty-fifty" style="height:100%;">
+                    <div id="animals-list"></div>
+                    <div>
+                        <div class="high-contrast-background animal-card-highlight">
+                            <div class="fifty-fifty" style="height: 41.701%;">
+                                <div>
+                                    <img id="highlighted-grid-item-image">
+                                </div>
+                                <div>
+                                    <h1 id="highlighted-grid-item-name"></h1>
+                                    <p id="highlighted-grid-item-description"></p>
+                                </div>
+                            </div>
+                            <div id="highlighted-grid-item-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="transition">
+            <img src="./images/transitions/index-2.PNG">
+        </div>
+        <div class="component" id="contact">contact.js</div>
+    </body>
+    <script src="https://kit.fontawesome.com/be1d0bbb71.js" crossorigin="anonymous"></script>
+    <script src="/scripts/requests.js"></script>
+    <script src="/scripts/components.js"></script>
+    <script src="/scripts/calander.js"></script>
+    <script src="/scripts/selectionGrid.js"></script>
+    <script src="/scripts/accesibility.js"></script>
+    <script>
+        registerCalander(document.getElementById("zoo-calander"), true, bookSafari);
+
+        const animals = {
+            "Emu": {
+                "type": "Bird",
+                "description": "Emus range over large areas, foraging on fruits, seeds, plant shoots, small animals, animal droppings, and insects. They mate and nest over the Australian winter, and it's not always a loving affair—females have been known to fight viciously over unpaired males.",
+                "details": {
+                    "distribution": "Australia",
+                    "habitat": "Desert shrub lands",
+                    "height": "5 - 6.2 feet",
+                    "weight": "50 - 55 kg",
+                    "lifespan": "25 to 28 years",
+                    "threats": "Habitat loss",
+                    "zoo location": "Desert Expedition",
+                },
+                "image": "images/animals/emu.png"
+            }, 
+            "Snow leopard": {
+                "type": "Mammal",
+                "description": "Jaguars are the largest of South America's big cats and the third largest cats in the world. Their fur is usually tan or orange with black spots, called \"rosettes\" because they are shaped like roses. Some jaguars are so dark they don't seem to have spots.",
+                "details": {
+                    "distribution": "Mountanious Eurasia",
+                    "habitat": "Mountains",
+                    "height": "2 feet",
+                    "weight": "22 - 55 kg",
+                    "lifespan": "15 - 18 years",
+                    "threats": "Hunting, habitat loss",
+                    "zoo location": "Mountanious Expedition",
+                },
+                "image": "images/animals/snow-leopard.png"
+            }, 
+            "Jaguar": {
+                "type": "Mammal",
+                "description": "Some jaguars are so dark they don't seem to have spots. Unlike many other cats, jaguars do not avoid water; in fact, they are quite good swimmers. Rivers provide prey in the form of fish, turtles, or caimans—small, alligatorlike animals. Jaguars also eat larger animals such as deer, peccaries, capybaras, and tapirs.",
+                "details": {
+                    "distribution": "South America",
+                    "habitat": "Tropical lowlands",
+                    "height": "2.2 - 2.5 feet",
+                    "weight": "56 - 96 kg",
+                    "lifespan": "12 - 15 years",
+                    "threats": "Hunting, habitat loss",
+                    "zoo location": "Tropical Expedition",
+                },
+                "image": "images/animals/jaguar.png"
+            }, 
+            "Rhino": {
+                "type": "Mammal",
+                "description": "Rhinoceroses are universally recognized by their massive bodies, stumpy legs and either one or two dermal horns. In some species, the horns may be short or not obvious. They are renowned for having poor eyesight, but their senses of smell and hearing are well developed.",
+                "details": {
+                    "distribution": "South Africa",
+                    "habitat": "Open grassland",
+                    "height": "5 - 6 feet",
+                    "weight": "1800 - 2700 kg",
+                    "lifespan": "40 to 50 years",
+                    "threats": "Hunting",
+                    "zoo location": "Savanna Expedition",
+                },
+                "image": "images/animals/rhino.png"
+            }, 
+            "Turtle": {
+                "type": "Mammal",
+                "description": "Turtles are 'amniotes' – they breathe air and lay their eggs on land, although many species live in or around water. 9. These cold-blooded creatures have an incredibly long life span. The oldest ever recorded, named Tu”i Malila, of Tonga Island, passed away at the grand old age of 188!",
+                "details": {
+                    "distribution": "World wide",
+                    "habitat": "Shallow continental shelf water",
+                    "height": "2.5 - 6.5 feet",
+                    "weight": "33 - 50 kg",
+                    "lifespan": "up to 150 years",
+                    "threats": "Climate chnage, pollution",
+                    "zoo location": "Aquarium",
+                },
+                "image": "images/animals/turtle.png"
+            }, 
+            "Sugar Glider": {
+                "type": "Mammal",
+                "description": "These common, tree-dwelling marsupials are native to tropical and cool-temperate forests in Australia, Indonesia, and Papua New Guinea. Their “wings” are made from a thin skin stretched between the fifth forefinger and back ankle, and they use their bushy tails as rudders as they soar through the air.",
+                "details": {
+                    "distribution": "Australia & New Guinea",
+                    "habitat": "Savanna",
+                    "height": "2 inches",
+                    "weight": "115 - 140 grams",
+                    "lifespan": "10 - 12 years",
+                    "threats": "Deforestation, feral animals",
+                    "zoo location": "Savanna Expedition"
+                },
+                "image": "images/animals/sugar-glider.png"
+            }, 
+            "Giraffe": {
+                "type": "Mammal",
+                "description": "Giraffes are known as the gentle giants of the animal kingdom and they are the tallest living land animals in the world. They can grow as tall as five metres tall and have incredibly long legs and necks. They can even grow as tall as a double-decker bus! Giraffes live in the hot grasslands of Africa.",
+                "details": {
+                    "distribution": "Africa",
+                    "habitat": "Savanna",
+                    "height": "14 - 18 feet",
+                    "weight": "830 - 1200 kg",
+                    "lifespan": "20 - 27 years",
+                    "threats": "Habitat loss, illegal hunting",
+                    "zoo location": "Savanna Expedition"
+                },
+                "image": "images/animals/giraffe.png"
+            }, 
+            "Elephant": {
+                "type": "Mammal",
+                "description": "Elephants are known for their large ears, tusks made of ivory and their trunks. 2) Elephants are the world's largest land animal! Male African elephants can reach 3m tall and weigh between 4,000 -7,500kg. Asian elephants are slightly smaller, reaching 2.7m tall and weighing 3,000– 6,000kg.",
+                "details": {
+                    "distribution": "Africa & Asia",
+                    "habitat": "Savanna, grasslands, forest",
+                    "height": "6.6 - 11.5 feet",
+                    "weight": "2700 - 6000 kg",
+                    "lifespan": "48 - 70 years",
+                    "threats": "Poaching",
+                    "zoo location": "Savanna Expedition"
+                },
+                "image": "images/animals/elephant.png"
+            }
+        }
+
+        window.addEventListener("load", () => populateGrid("animals-list", animals));
+
+    </script>
+</html>

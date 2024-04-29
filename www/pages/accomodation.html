@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <title>Ridget Zoo Adventures</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/styles/comic-neue.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/accomodation.css">
+    </head>
+    <body>
+        <div class="accomodation-header full-page-section">
+            <div class="component" id="navbar">navbar.js</div>
+            <div class="section-body">
+                <div class="high-contrast-background hero-highlight-card comic-neue-regular">
+                    <h1>When would you like to stay?</h1>
+                    <div class="fifty-fifty">
+                        <div class="high-contrast-background calander-card" id="accomodation-calander">
+                            <div class="calander-header">
+                                <select>
+                                </select>
+                                <select>
+                                </select>
+                            </div>
+                            <div class="calander-dates">
+                            </div>
+                        
+                            <div class="calander-footer">
+                                <select id="accomodation-type">
+                                    <option selected>Standard</option>
+                                    <option>Woodland</option>
+                                    <option>Snow</option>
+                                    <option>Aquarium</option>
+                                    <option>Camping</option>
+                                    <option>Eco-pod</option>
+                                    <option>Treehouse</option>
+                                    <option>Campervan</option>
+                                </select>
+                                <button class="calander-booking-button">Confirm booking</button>
+                            </div>
+
+                        </div>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="transition">
+            <img src="./images/transitions/accomodation-1.PNG">
+        </div>
+
+        <div class="animal-list-section full-page-section comic-neue-regular">
+            <div class="section-body">
+                <div class="fifty-fifty" style="height:100%;">
+                    <div id="accomodation-list"></div>
+                    <div>
+                        <div class="high-contrast-background animal-card-highlight">
+                            <div class="fifty-fifty" style="height: 41.701%;">
+                                <div>
+                                    <img id="highlighted-grid-item-image">
+                                </div>
+                                <div>
+                                    <h1 id="highlighted-grid-item-name"></h1>
+                                    <p id="highlighted-grid-item-description"></p>
+                                </div>
+                            </div>
+                            <div id="highlighted-grid-item-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="transition">
+            <img src="./images/transitions/index-2.PNG">
+        </div>
+        <div class="component" id="contact">contact.js</div>
+    </body>
+    <script src="https://kit.fontawesome.com/be1d0bbb71.js" crossorigin="anonymous"></script>
+    <script src="/scripts/requests.js"></script>
+    <script src="/scripts/components.js"></script>
+    <script src="/scripts/calander.js"></script>
+    <script src="/scripts/selectionGrid.js"></script>
+    <script src="/scripts/accesibility.js"></script>
+    <script>
+        registerCalander(document.getElementById("accomodation-calander"), false, bookAccomodation);
+
+        const accomodation = {
+            "Snow": {
+                "type": "Limited Spaces",
+                "description": "",
+                "details": {
+                    "sleeps": "6",
+                    "amenities": "Wifi, Hot tub, Kitchen",
+                    "cost/night": "Enquire for details",
+                    "Max stay": "24",
+                    "Min stay": "2",
+                    "Available": 5
+                },
+                "image": "images/accomodation/snow.png"
+            },
+            "Woodland": {
+                "type": "",
+                "description": "",
+                "details": {
+                    "sleeps": "12",
+                    "amenities": "Wifi, Kitchen, Hammock sleeping",
+                    "cost/night": "Enquire for details",
+                    "Max stay": "24",
+                    "Min stay": "2",
+                    "Available": 24
+                },
+                "image": "images/accomodation/woodland.png"
+            },
+            "Aquarium": {
+                "type": "Limited Spaces",
+                "description": "",
+                "details": {
+                    "sleeps": "4",
+                    "amenities": "Wifi, kitchen",
+                    "cost/night": "Enquire for details",
+                    "Max stay": "12",
+                    "Min stay": "2",
+                    "Available": 9
+                },
+                "image": "images/accomodation/aquarium.png"
+            },
+            "Camping": {
+                "type": "",
+                "description": "",
+                "details": {
+                    "pitch size": "large",
+                    "amenities": "Electric plugin, showers",
+                    "cost/night": "Enquire for details",
+                    "Max stay": "12",
+                    "Min stay": "2",
+                    "Available": 120
+                },
+                "image": "images/accomodation/camping.png"
+            },
+            "Eco-pod": {
+                "type": "Limited Spaces",
+                "description": "",
+                "details": {
+                    "sleeps": "2",
+                    "amenities": "Completely eco-friendly",
+                    "cost/night": "Enquire for details",
+                    "Max stay": "24",
+                    "Min stay": "3",
+                    "Available": 9
+                },
+                "image": "images/accomodation/eco-pod.png"
+            },
+            "Treehouse": {
+                "type": "Limited Spaces",
+                "description": "",
+                "details": {
+                    "sleeps": "8",
+                    "amenities": "Kitchen, WiFi",
+                    "cost/night": "Enquire for details",
+                    "Max stay": "12",
+                    "Min stay": "4",
+                    "Available": 12
+                },
+                "image": "images/accomodation/treehouse.png"
+            },
+            "Campervan": {
+                "type": "",
+                "description": "",
+                "details": {
+                    "Max height": "14 foot",
+                    "Max width": "9 foot",
+                    "amenities": "Electric plug in, shower blocks",
+                    "cost/night": "Enquire for details",
+                    "Max stay": "2",
+                    "Min stay": "31",
+                    "Available": 60
+                },
+                "image": "images/accomodation/campervan.png"
+            },
+            "Standard": {
+                "type": "",
+                "description": "",
+                "details": {
+                    "sleeps": "4",
+                    "amenities": "Kitchen, WiFi",
+                    "cost/night": "Enquire for details",
+                    "Max stay": "3",
+                    "Min stay": "31",
+                    "Available": 32
+                },
+                "image": "images/accomodation/standard.png"
+            },
+            
+        }
+
+        window.addEventListener("load", () => populateGrid("accomodation-list", accomodation));
+
+
+    </script>
+</html>

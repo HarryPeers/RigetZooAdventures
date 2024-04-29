@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Ridget Zoo Adventures</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/styles/comic-neue.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/login.css">
+    </head>
+    <body>
+        <div class="register-header full-page-section">
+            <div class="component">navbar.js</div>
+            <div class="section-body">
+                <div class="high-contrast-background login-card card-centered hero-highlight-card comic-neue-regular" >
+                    <h1>Please login to continue</h1>
+
+                    <div class="high-contrast-background login-card-inner">
+                        <input placeholder="Email address" id="email-address">
+                        <input placeholder="Confirm Email address" id="email-address-confirm">
+                        <input placeholder="Password" id="password" type="password">
+                        <input placeholder="Confirm Password" id="password-confirm" type="password">
+
+                        <span class="secure-account-content">
+                            <h1>Secure your account</h1>
+                            <p>If you ever loose access to your account, you will be challenged using the security question you enter below, please use a challenge you will remember to ensure you keep access to your account.</p><br>
+                        </span> 
+
+                        <input placeholder="Security Question" id="security-question">
+                        <input placeholder="Security Answer" id="security-answer">
+
+                        <div class="login-account-button" onclick="loginAccount()">Already have an account?</div>
+
+                        <button onclick="register()">Register</button>
+                        
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+    <script src="https://kit.fontawesome.com/be1d0bbb71.js" crossorigin="anonymous"></script>
+    <script src="/scripts/requests.js"></script>
+    <script src="/scripts/components.js"></script>
+    <script src="/scripts/authentication.js"></script>
+    <script src="/scripts/accesibility.js"></script>
+</html>

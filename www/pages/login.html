@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Ridget Zoo Adventures</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/styles/comic-neue.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/login.css">
+    </head>
+    <body>
+        <div class="login-header full-page-section">
+            <div class="component">navbar.js</div>
+            <div class="section-body">
+                <div class="high-contrast-background login-card card-centered hero-highlight-card comic-neue-regular" >
+                    <h1>Please login to continue</h1>
+
+                    <div class="high-contrast-background login-card-inner">
+                        <input placeholder="Email address" id="email-address">
+
+                        <div id="forgotten-password-section" hidden>
+                            
+                            <div id="forgotten-password-section-1">
+                                <span class="forgotten-password" onclick="toggleRememberPassword()">Remember password?</span> <button onclick="loadSecurityQuestion()">Next</button>
+
+                                <div class="account-login-error" id="email-validation-error" hidden>Email was not found</div>
+                            </div>
+
+                            <div id="forgotten-password-section-2" hidden>
+
+                                <span class="secure-account-content">
+                                    <h1>Answer the question below:</h1>
+                                    <p id="security-question-content"></p><br>
+                                </span> 
+
+                            <input placeholder="Security Answer" id="security-answer">
+
+                            <span class="forgotten-password" onclick="toggleRememberPassword()">Remember password?</span> <button onclick="validateSecurityQuestion()">Verify</button>
+    
+                            </div>
+
+                            <div id="forgotten-password-section-3" hidden>
+
+                            <input placeholder="New password" id="new-password" type="password">
+                            <input placeholder="Confirm password" id="new-password-confirm" type="password">
+
+                            <span class="forgotten-password" onclick="toggleRememberPassword()">Remember password?</span> <button onclick="changePassword()">Confirm</button>
+    
+                            </div>
+                            
+                            <div class="account-login-error" id="security-question-error" hidden>Incorrect answer</div>
+    
+                        </div>
+
+                        <div id="login-section">
+                            <input placeholder="Password" id="password" type="password">
+
+                            <span class="forgotten-password" onclick="toggleForgottenPassword()">Forgotten Password?</span> <button onclick="login()">Login</button>
+    
+                            <div class="account-login-error" id="login-error" hidden>Failed to login.</div>
+                        </div>         
+
+                        <div class="register-account-button" onclick="registerAccount()">Don't have an account? Register now</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+    <script src="https://kit.fontawesome.com/be1d0bbb71.js" crossorigin="anonymous"></script>
+    <script src="/scripts/requests.js"></script>
+    <script src="/scripts/components.js"></script>
+    <script src="/scripts/authentication.js"></script>
+    <script src="/scripts/accesibility.js"></script>
+</html>

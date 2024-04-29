@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Ridget Zoo Adventures</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/styles/comic-neue.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/dashboard.css">
+    </head>
+    <body>
+        <div class="dashboard-header full-page-section">
+            <div class="component" id="navbar">navbar.js</div>
+            <div class="section-body">
+                <div class="high-contrast-background welcome-sign comic-neue-regular" style="text-align: center;">
+                    <h>Welcome back</h>
+                    <p style="font-size:18px;">On the dashboard, you can view your bookings. You have <span id="loyalty-points"></span> loyalty points, which is worth £<span id="loyalty-points-pounds"></span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="transition" id="bookings">
+            <img src="./images/transitions/dashboard-transition.jpg">
+        </div>
+
+        <div class="animal-list-section full-page-section comic-neue-regular">
+            <div class="section-body">
+                <div class="fifty-fifty" style="height:100%;">
+                    <div id="pending-bookings-list"></div>
+                    <div>
+                        <div class="high-contrast-background animal-card-highlight">
+                            <div class="fifty-fifty" style="height: 41.701%;">
+                                <div>
+                                    <img id="highlighted-grid-item-image">
+                                </div>
+                                <div>
+                                    <h1 id="highlighted-grid-item-name"></h1>
+                                    <p id="highlighted-grid-item-description"></p>
+                                </div>
+                            </div>
+                            <div id="highlighted-grid-item-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="transition">
+            <img src="./images/transitions/index-2.PNG">
+        </div>
+        <div class="component" id="contact">contact.js</div>
+    </body>
+    <script src="https://kit.fontawesome.com/be1d0bbb71.js" crossorigin="anonymous"></script>
+    <script src="/scripts/requests.js"></script>
+    <script src="/scripts/components.js"></script>
+    <script src="/scripts/authentication.js"></script>
+    <script src="/scripts/bookings.js"></script>
+    <script src="/scripts/accesibility.js"></script>
+    <script src="/scripts/selectionGrid.js"></script>
+</html>

@@ -1,0 +1,64 @@
+.dashboard-header {
+    background: url("../images/backgrounds/dashboard.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.dashboard-transition {
+    background: url("../images/transitions/dashboard-transition.png");
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-sign {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    display: block;
+    margin: auto;
+
+    font-size: 45px;
+
+    width: fit-content;
+
+    border-radius: 30px;
+
+    transform: translateY(100px);
+}
+
+.accomodation-header {
+    background: url("../images/backgrounds/accomodation.PNG");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#pending-bookings-list {
+    height: 100%;
+
+    overflow: scroll;
+    overflow-x: hidden;
+
+    padding-right: 20px;
+}
+
+
+#pending-bookings-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+#pending-bookings-list::-webkit-scrollbar-track {
+    display: none;
+}
+  
+  /* Handle */
+#pending-bookings-list::-webkit-scrollbar-thumb {
+    background: url("../images/textures/wood-texture-2.jpg");
+
+    border-radius: 10px;
+}
+  

@@ -1,0 +1,30 @@
+<div class="high-contrast-background navbar">
+    <div>
+        <div class="navbar-items comic-neue-regular">
+            <div onclick="window.location.replace('/')">
+                <img src="./images/logo.png"/>
+            </div>
+            <div onclick="window.location.replace('/')">Zoo</div>
+            <div onclick="window.location.replace('/accomodation')">Hotel</div>
+            <div onclick="window.location.replace('#contact')">Contact us</div>
+            <div onmouseleave="closeDropdown(event)">
+                <div class="dropdown-header" onmouseover="openDropdown(event)">Accesibility<i class="fa-solid fa-chevron-down"></i></div><br>
+                <div class="high-contrast-background dropdown-content" style="display:none;cursor:default;">
+                    <table>
+                        <tr>
+                            <td onclick="toggleAccesibilityOption('contrastMode-accesibility')">High contrast mode</td>
+                            <td><input type="checkbox" id="contrastMode-accesibility" onchange="changeAccesibility('contrastMode-accesibility')"></td>
+                        </tr>
+                        <!-- <tr>
+                            <td onclick="toggleAccesibilityOption('fontSize-accesibility')">Font-size</td>
+                            <td><input type="checkbox" id="fontSize-accesibility" onchange="changeAccesibility('fontSize-accesibility')"></td>
+                        </tr> -->
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-user" onclick="window.location.replace('/login')">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>      
+</div>
